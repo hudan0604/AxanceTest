@@ -2,14 +2,10 @@
   background-color: #dc3545 !important;
   margin-right: 35px !important;
 }
-#no_style_list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 .home_categories {
   position: absolute;
   bottom: 0;
+  line-height: 4;
 }
 #no_style_list li {
   margin-bottom: 15px;
@@ -17,4 +13,23 @@
 #vertical_left_black_line {
   height: 20%;
   border-left: 1px solid black;
+}
+@media (max-width: 576px) {
+  .shopDiv_XS_screens {
+    height: 185px;
+  }
+  .shopButton_XS {
+    margin-top: 80px;
+  }
+  .home_categories {
+    text-align: left;
+    line-height: 2;
+    margin-top: 10px;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .shopDiv_XS_screens {
+    height: 185px;
+  }
 }

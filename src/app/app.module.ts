@@ -7,17 +7,20 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule, MatBadgeModule } from '@angular/material';
+import { MatIconModule, MatBadgeModule, MatDialogModule } from '@angular/material';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductsComponent, MenuComponent],
+  declarations: [AppComponent, HomeComponent, ProductsComponent, MenuComponent, HelpComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDialogModule
   ],
+  entryComponents: [HelpComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

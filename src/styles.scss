@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.dFlex {
+  display: flex;
+}
+.no_style_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.pRelative {
+  position: relative;
+}
+.ElementAtRight {
+  position: absolute;
+  right: 0;
+}
+
+.w25 {
+  width: 25%;
+}
+.w50 {
+  width: 50%;
+}
+.w75 {
+  width: 75%;
+}
+.mLeft15 {
+  margin-left: 15px;
+}
+@media (max-width: 576px) {
+  .hide {
+    display: none;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .hide {
+    display: none;
+  }
+}

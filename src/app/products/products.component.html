@@ -1,1 +1,33 @@
-<p>products works!</p>
+<div class="container ">
+  <div class="row pRelative filters">
+    <span class="ElementAtRight dFlex">
+      <label class="mRight50px">Sort by : </label>
+      <span>
+        <i *ngIf="!order" class="fa fa-arrow-up" (click)="sortBy()"></i>
+        <i *ngIf="order" class="fa fa-arrow-down" (click)="sortBy()"></i>
+      </span>
+      <ul class="no_style_list dFlex">
+        <li class="mRight50px">
+          Price
+        </li>
+        <li class="mRight50px">Rating</li>
+        <li>Brand</li>
+      </ul>
+    </span>
+  </div>
+  <div class="row dFlex productsDiv">
+    <div
+      class="col-md-3 col-lg-3 col-xs-12 articleDiv"
+      *ngFor="let article of listOfProducts"
+    >
+      <img [src]="getArticleImageUrl(article)" [alt]="article.name" />
+      <span>
+        <label id="articleName">{{ article.name }}</label>
+        <label>{{ article.creator }}</label>
+      </span>
+      <span>
+        <figcaption>{{ article.price | currency: 'USD' }}</figcaption>
+      </span>
+    </div>
+  </div>
+</div>

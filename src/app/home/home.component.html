@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="row">
     <!--SHOP DIV-->
-    <div class="col-md-3">
+    <div class="col-md-3 col-xs-12 shopDiv_XS_screens" >
       <h1>Shop</h1>
       <!-- Vertical left black line -->
-      <div id="vertical_left_black_line"></div>
+      <div id="vertical_left_black_line" class="hide"></div>
       <!-- Categories -->
       <div class="home_categories">
-        <ul id="no_style_list">
+        <ul class="no_style_list">
           <li>Home furnishings</li>
           <li>Accessories</li>
           <li>Sports</li>
@@ -20,6 +20,7 @@
     <div
       id="carouselExampleIndicators"
       class="carousel slide col-md-6"
+      style="margin-top: 50px;"
       data-ride="carousel"
     >
       <ol class="carousel-indicators">
@@ -59,9 +60,9 @@
     <!-- CARROUSEL END -->
 
     <!-- SHOP NOW DIV -->
-    <div class="col-md-3">
+    <div class="col-md-3 col-xs-12 shopButton_XS">
       <div class="home_categories">
-        <button class="btn btn-dark">Shop Now</button>
+        <button class="btn btn-dark" routerLink="/products">Shop Now</button>
       </div>
     </div>
   </div>

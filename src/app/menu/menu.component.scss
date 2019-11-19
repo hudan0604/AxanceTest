@@ -1,7 +1,38 @@
 .brand {
-    font-size: 30px;
-    text-align: center;
+  font-size: 30px;
+  text-align: center;
 }
 .cart {
-    font-size: 30px;
+  font-size: 30px;
+}
+.helpIcon {
+  font-size: 27px;
+  color: rgb(235, 67, 67);
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .cartIcon_XS_screens {
+    text-align: right;
+  }
+  .collapsing-menu-items {
+    background: #dad4d49c;
+    border: 1px solid grey;
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .collapsing-menu {
+    display: none;
+  }
 }
