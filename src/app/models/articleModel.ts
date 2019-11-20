@@ -1,3 +1,6 @@
+/**
+ * @ignore
+ */
 export interface articleModel {
   name: string;
   creator: string;

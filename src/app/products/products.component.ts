@@ -1,17 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { articleModel } from '../models/articleModel';
 
+/**
+ * the products component
+ */
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+/**
+ * The products component
+ */
 export class ProductsComponent implements OnInit {
+  /**
+   * boolean for sorting
+   */
   order = false;
+  /**
+   * array of products of type articleModel
+   */
   listOfProducts: Array<articleModel>;
+  /**
+   * @ignore
+   */
   constructor() {}
-
+  /**
+   * Initialization of the component
+   */
   ngOnInit() {
+    /**
+     *  hard coded list of products
+     */
     this.listOfProducts = [
       { name: 'Picklesuit', creator: 'John Deere', price: 225, url: '' },
       { name: 'Tapeki', creator: 'Joseph Lincoln', price: 560, url: '' },
@@ -45,9 +65,22 @@ export class ProductsComponent implements OnInit {
       { name: 'slaoeieub', creator: 'Kevin Scott', price: 698, url: '' }
     ];
   }
-  getArticleImageUrl(article: { name: any; }): string {
+  /**
+   * @param {string} article  The product
+   *
+   * @returns the product's url in the assets directory
+   */
+  getArticleImageUrl(article: { name: any }): string {
     return `../assets/images/products/${article.name}.jpg`;
   }
+  /**
+   * Sorting method
+   *
+   * each time we click, the boolean changes its value
+   * to see/hide the arrow up and down icons
+   *
+   * And to know if we apply the ascending or descending sorting
+   */
   sortBy(): void {
     this.order = !this.order;
     if (this.order) {
