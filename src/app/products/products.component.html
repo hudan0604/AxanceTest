@@ -3,10 +3,17 @@
     <span class="ElementAtRight dFlex">
       <label class="mRight50px">Sort by : </label>
       <span>
-        <i *ngIf="!order" class="fa fa-arrow-up" (click)="sortBy()"></i>
-        <i *ngIf="order" class="fa fa-arrow-down" (click)="sortBy()"></i>
+        <!-- Arrow up icon -->
+        <i *ngIf="!order" class="fa fa-arrow-up pointer" (click)="sortBy()"></i>
+        <!-- Arrow down icon -->
+        <i
+          *ngIf="order"
+          class="fa fa-arrow-down pointer"
+          (click)="sortBy()"
+        ></i>
       </span>
       <ul class="no_style_list dFlex">
+        <!-- Only the 'price' criteria is implemented for the technical test -->
         <li class="mRight50px">
           Price
         </li>
@@ -16,11 +23,16 @@
     </span>
   </div>
   <div class="row dFlex productsDiv">
+    <!-- Div of each product, same template for all -->
     <div
       class="col-md-3 col-lg-3 col-xs-12 articleDiv"
       *ngFor="let article of listOfProducts"
     >
-      <img [src]="getArticleImageUrl(article)" [alt]="article.name" />
+      <img
+        class="col-sm-12 col-xs-12"
+        [src]="getArticleImageUrl(article)"
+        [alt]="article.name"
+      />
       <span>
         <label id="articleName">{{ article.name }}</label>
         <label>{{ article.creator }}</label>

@@ -36,6 +36,10 @@ body {
 .mLeft15 {
   margin-left: 15px;
 }
+.pointer {
+  cursor: pointer;
+}
+// Extra-small devices
 @media (max-width: 576px) {
   .hide {
     display: none;

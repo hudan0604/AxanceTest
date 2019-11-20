@@ -45,10 +45,10 @@ export class ProductsComponent implements OnInit {
       { name: 'slaoeieub', creator: 'Kevin Scott', price: 698, url: '' }
     ];
   }
-  getArticleImageUrl(article): string {
+  getArticleImageUrl(article: { name: any; }): string {
     return `../assets/images/products/${article.name}.jpg`;
   }
-  sortBy() {
+  sortBy(): void {
     this.order = !this.order;
     if (this.order) {
       this.listOfProducts = this.listOfProducts.sort((prev, next) =>

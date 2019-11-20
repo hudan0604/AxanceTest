@@ -27,7 +27,19 @@
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px) {
+  .collapsing-menu-items {
+    background: #dad4d49c;
+    border: 1px solid grey;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .cartIcon_XS_screens {
+    text-align: right;
+  }
 }
 
 // Medium devices (tablets, 768px and up)

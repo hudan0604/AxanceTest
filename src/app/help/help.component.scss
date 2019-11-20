@@ -17,3 +17,16 @@
   text-decoration: underline;
   font-weight: 500;
 }
+
+// Extra-small devices
+@media (max-width: 576px) {
+  .popUpContent {
+    padding: 17px 15px;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .popUpContent {
+    padding: 17px 15px;
+  }
+}

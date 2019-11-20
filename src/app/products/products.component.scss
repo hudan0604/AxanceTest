@@ -16,3 +16,21 @@
 .filters {
   margin-bottom: 75px;
 }
+// Extra-small devices
+@media (max-width: 576px) {
+  .articleDiv {
+    margin: 0px 41px 30px;
+    height: 250px;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .ElementAtRight {
+    margin: auto;
+    position: relative;
+  }
+  .articleDiv {
+    margin: 0px 41px 100px;
+    height: 287px;
+  }
+}

@@ -1,29 +1,32 @@
 <nav class="navbar navbar-expand-md">
   <span class="col-md-1 col-xs-4">
+    <!-- Menu icon -->
     <i class="fa fa-bars" (click)="toggleMenu()"></i>
   </span>
   <span class="col-md-1 hide">
     <i class="fa fa-search"></i>
   </span>
-
-  <div class="col-md-7 col-xs-8 brand" routerLink="/">
-    MINIM
+  <!-- Brand title -->
+  <div class="col-md-7 col-xs-8 brand pointer" routerLink="/">
+    <h1>MINIM</h1>
   </div>
 
   <span class="col-md-1 hide">
     ACCOUNT
   </span>
   <span class="col-md-1 col-xs-4 cartIcon_XS_screens">
+    <!-- Cart icon with matbadge just for the example -->
     <mat-icon class="material-icons" matBadge="0" matBadgeColor="warn">
       shopping_cart
     </mat-icon>
   </span>
   <span class="col-md-1 hide">
-    <i class="fa fa-info-circle helpIcon" (click)="openDialog()"></i>
+    <!-- Click opens the help modal -->
+    <i class="fa fa-info-circle helpIcon pointer" (click)="openDialog()"></i>
   </span>
 </nav>
-<!-- Collapsing menu, visible only on mobile screens -->
-<div *ngIf="toggle" class="container collapsing-menu">
+<!-- Collapsing menu, visible only on extra small devices -->
+<div *ngIf="toggle" class="container-fluid collapsing-menu">
   <div class="row collapsing-menu-items">
     <span class="col-xs-12 mLeft15">Account</span>
   </div>

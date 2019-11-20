@@ -30,6 +30,14 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 768px) {
   .shopDiv_XS_screens {
-    height: 185px;
+    height: 216px;
+  }
+  .shopButton_XS {
+    margin-top: 80px;
+  }
+  .home_categories {
+    text-align: left;
+    line-height: 2;
+    margin-top: 10px;
   }
 }
