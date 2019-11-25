@@ -9,16 +9,20 @@ import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatBadgeModule, MatDialogModule } from '@angular/material';
 import { HelpComponent } from './help/help.component';
+import { NavbarProductsComponent } from './navbar-products/navbar-products.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductsComponent, MenuComponent, HelpComponent],
+  declarations: [AppComponent, HomeComponent, ProductsComponent, MenuComponent, HelpComponent, NavbarProductsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatBadgeModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbPaginationModule
   ],
   entryComponents: [HelpComponent],
   providers: [],

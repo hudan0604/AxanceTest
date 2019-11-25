@@ -1,32 +1,48 @@
-<div class="container ">
-  <div class="row pRelative filters">
-    <span class="ElementAtRight dFlex">
-      <label class="mRight50px">Sort by : </label>
-      <span>
-        <!-- Arrow up icon -->
-        <i *ngIf="!order" class="fa fa-arrow-up pointer" (click)="sortBy()"></i>
-        <!-- Arrow down icon -->
-        <i
-          *ngIf="order"
-          class="fa fa-arrow-down pointer"
-          (click)="sortBy()"
-        ></i>
-      </span>
-      <ul class="no_style_list dFlex">
-        <!-- Only the 'price' criteria is implemented for the technical test -->
-        <li class="mRight50px">
-          Price
-        </li>
-        <li class="mRight50px">Rating</li>
-        <li>Brand</li>
-      </ul>
+<app-navbar-products></app-navbar-products>
+
+<nav
+  class="navbar navbar-expand-md justify-content-between"
+  style="height: 140px;"
+>
+  <span class="col-md-2 col-xs-4 fWeightB pointer" routerLink="/">
+    Home - H2
+  </span>
+  <span class="col-md-5 dFlex" style="justify-content: flex-end;">
+    <label class="fWeightB">Sort by : </label>
+
+    <ul class="no_style_list dFlex">
+      <!-- Only the 'price' criteria is implemented for the technical test -->
+      <li class="sortingCriterias fWeightB pointer" (click)="sortBy()">
+        Price
+      </li>
+      <li class="sortingCriterias fWeightB">Rating</li>
+      <li class="fWeightB" style="width: 85px; text-align: center;">Brand</li>
+    </ul>
+  </span>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-between" style="height: 100px;
+  margin-top: 50px;">
+    <span class="col-md-2 fWeightB">
+      <h3>Home decor</h3>
+    </span>
+    <span class="col-md-4 tAlignR">
+      <button
+        class="btn fWeightB"
+        style="border: 2px solid black;"
+        (click)="toggleFilterSearch()"
+      >
+        Filter by
+      </button>
+      <div *ngIf="toggleFilterSearch"></div>
     </span>
   </div>
   <div class="row dFlex productsDiv">
     <!-- Div of each product, same template for all -->
     <div
-      class="col-md-3 col-lg-3 col-xs-12 articleDiv"
-      *ngFor="let article of listOfProducts"
+      class="col-xs-12 articleDiv"
+      *ngFor="let article of listOfProducts | slice: (page - 1) * 10:page * 10"
     >
       <img
         class="col-sm-12 col-xs-12"
@@ -38,8 +54,18 @@
         <label>{{ article.creator }}</label>
       </span>
       <span>
-        <figcaption>{{ article.price | currency: 'USD' }}</figcaption>
+        <figcaption>{{ article.price | currency: "USD" }}</figcaption>
       </span>
     </div>
   </div>
+  <ngb-pagination
+    class="d-flex justify-content-center"
+    [collectionSize]="listOfProducts.length"
+    [(page)]="page"
+    size="lg"
+    directionLinks="false"
+  >
+    <ng-template ngbPaginationPrevious>Previous</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+  </ngb-pagination>
 </div>

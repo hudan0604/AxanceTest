@@ -22,6 +22,10 @@ export class ProductsComponent implements OnInit {
    */
   listOfProducts: Array<articleModel>;
   /**
+   * page index for pagination
+   */
+  page = 1;
+  /**
    * @ignore
    */
   constructor() {}

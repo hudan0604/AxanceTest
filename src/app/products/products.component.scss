@@ -3,19 +3,24 @@
   font-size: 20px;
   margin-right: 20px;
 }
-.mRight50px {
-  margin-right: 50px;
+.sortingCriterias {
+  text-align: center;
+  border-right: 1px solid black;
+  width: 85px;
 }
 .productsDiv {
   flex-wrap: wrap;
 }
 .articleDiv {
-  margin: 0px 41px 70px;
+  margin: 0px 0px 94px 0px;
   height: 250px;
+  width: 33%;
+  padding: 0px 15px 0px 34px;
 }
 .filters {
   margin-bottom: 75px;
 }
+
 // Extra-small devices
 @media (max-width: 576px) {
   .articleDiv {
